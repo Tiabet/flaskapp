@@ -2,9 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: flaskpod
+  labels:
+    app: flaskapp
 spec:
   containers:
   - name: tiabet
-    image: tiabet/flaskapp:v2.0.0
+    image: tiabet/flaskapp:latest
     ports:
-    - containerPort: 80
+    - containerPort: 5000
